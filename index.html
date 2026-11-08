@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
 <title>Layuna</title>
 <meta name="description" content="Layuna reimagines sleep in the UAE – individually tailored sleep surfaces.">
 <meta name="color-scheme" content="light">
-<meta name="theme-color" content="#e4d3b8">
+<meta name="theme-color" content="#e6dccd">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Layuna">
 <meta property="og:description" content="Layuna reimagines sleep in the UAE – individually tailored sleep surfaces.">
@@ -15,29 +15,30 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <style>
 :root{--ivory:#fbf8f3;--serif:"Bodoni 72","Bodoni Moda",Didot,"Didot LT STD","Playfair Display","Times New Roman",Georgia,serif}
-*{box-sizing:border-box}html,body{margin:0;height:100%;-webkit-text-size-adjust:100%}
-html{background:linear-gradient(to bottom,#e4d3b8 0%,#e4d3b8 50%,#bf844f 50%,#bf844f 100%)}
+*{box-sizing:border-box}html,body{margin:0;height:100%;touch-action:pan-x pan-y;overscroll-behavior:none;-webkit-text-size-adjust:100%}
+html{background:linear-gradient(to bottom,#e6dccd 0%,#e6dccd 50%,#c9a986 50%,#c9a986 100%)}
 body{background:transparent;color:var(--ivory);font-family:var(--serif);overflow:hidden}
 a{color:inherit;text-decoration:none}a:focus-visible{outline:1px solid var(--ivory);outline-offset:4px}
-.stage{position:fixed;inset:0;background:linear-gradient(to bottom,#e4d3b8 0%,#dcc4a2 45%,#c99a68 70%,#bf844f 100%)}
-.stage video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;-webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 10%,#000 86%,transparent 100%);mask-image:linear-gradient(to bottom,transparent 0%,#000 10%,#000 86%,transparent 100%)}
+.stage{position:fixed;inset:0;background:linear-gradient(to bottom,#e6dccd 0%,#ddcfba 45%,#d0b796 70%,#c9a986 100%)}
+.stage video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.68) sepia(.06) hue-rotate(-4deg) brightness(1.03) contrast(.97);-webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 10%,#000 86%,transparent 100%);mask-image:linear-gradient(to bottom,transparent 0%,#000 10%,#000 86%,transparent 100%)}
 .stage::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%, rgba(38,27,16,.30) 0%, rgba(38,27,16,.10) 42%, rgba(38,27,16,0) 70%),linear-gradient(to bottom, rgba(30,22,14,.12) 0%, rgba(30,22,14,0) 30%, rgba(30,22,14,0) 65%, rgba(30,22,14,.38) 100%)}
 .ui{position:fixed;inset:0;display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:1fr auto minmax(min-content, 1fr);padding:max(1.4rem, env(safe-area-inset-top)) clamp(1.2rem, 4vw, 3rem) max(1.2rem, env(safe-area-inset-bottom))}
 .center{grid-row:2;display:flex;flex-direction:column;align-items:center;text-align:center}
 .mark{margin:0;color:rgba(251,248,243,.8);font-weight:400;font-size:clamp(2.4rem, 8vw, 6rem);letter-spacing:.32em;margin-right:-.32em;line-height:1;text-shadow:0 1px 30px rgba(40,28,16,.25);animation:fade 2.4s ease-out both}
-.ar{display:block;width:clamp(8rem, 30vw, 22rem);height:auto;margin-top:clamp(.8rem, 2vw, 1.4rem);opacity:.74;filter:drop-shadow(0 1px 18px rgba(40,28,16,.25));animation:fade 2.4s ease-out .4s both}
-.prose{grid-row:3;align-self:end;justify-self:center;position:relative;width:min(38rem, calc(100% - clamp(2rem, 18vw, 16rem)));margin-top:clamp(1.2rem, 3vh, 3rem);margin-bottom:clamp(2.6rem, 6.5vh, 3.8rem);display:grid;grid-template-columns:1fr 1fr;column-gap:clamp(1.4rem, 3.2vw, 2.6rem);opacity:.5;text-shadow:0 1px 10px rgba(40,28,16,.25);animation:soft 3.4s ease-out 1s both}
+.ar{display:block;width:clamp(6.5rem, 22vw, 16rem);height:auto;margin-top:clamp(.8rem, 2vw, 1.4rem);opacity:.74;filter:drop-shadow(0 1px 18px rgba(40,28,16,.25));animation:fade 2.4s ease-out .4s both}
+.prose{grid-row:3;align-self:end;justify-self:center;position:relative;width:min(30rem, calc(100% - clamp(3rem, 26vw, 20rem)));margin-top:clamp(1.2rem, 3vh, 3rem);margin-bottom:clamp(2.6rem, 6.5vh, 3.8rem);display:grid;grid-template-columns:1fr 1fr;align-items:stretch;column-gap:clamp(2.6rem, 6vw, 4.6rem);opacity:.5;text-shadow:0 1px 10px rgba(40,28,16,.25);animation:soft 3.4s ease-out 1s both;touch-action:manipulation}
 .prose::before{content:"";position:absolute;left:50%;top:.2rem;bottom:.2rem;width:1px;background:currentColor;opacity:.4}
-.blk{min-width:0;font-size:clamp(.46rem, .66vw, .54rem);line-height:1.5;text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+.blk{min-width:0;display:flex;flex-direction:column;font-size:clamp(.42rem, .58vw, .5rem);line-height:1.55;text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+
 .blk p{margin:0}
 .kick{display:block;font-size:.86em;letter-spacing:.32em;text-transform:uppercase;margin-bottom:.8em}
 .kick i{font-style:normal;margin-right:.7em;opacity:.75}
 .lede{font-style:italic;font-size:1.16em;line-height:1.35;margin-bottom:.4em !important;text-align:left}
 .en .lede::first-letter{float:left;font-style:normal;font-size:2.9em;line-height:.8;margin:.05em .1em 0 0}
-.ar-t{font-family:var(--arab, "Geeza Pro","Al Nile","Noto Naskh Arabic",serif);line-height:1.75}
+.ar-t{font-family:var(--arab, "Geeza Pro","Al Nile","Noto Naskh Arabic",serif);line-height:1.55;font-size:clamp(.44rem, .6vw, .52rem)}
 .ar-t .kick{letter-spacing:0;font-size:.95em}
 .ar-t .lede{font-style:normal;font-weight:600;text-align:right}
-@media (max-width:640px){.prose{width:calc(100% - 2.6rem);column-gap:1.1rem;margin-bottom:3.2rem}.blk{font-size:6.8px;line-height:1.45}.ar-t{font-size:7.4px;line-height:1.7}.kick{letter-spacing:.24em}}
+@media (max-width:640px){.prose{width:calc(100% - 4.4rem);column-gap:2rem;margin-bottom:3.2rem}.blk{font-size:6.2px;line-height:1.5}.ar-t{font-size:6.6px;line-height:1.5}.kick{letter-spacing:.24em}}
 footer{position:fixed;left:0;right:0;bottom:max(1rem, env(safe-area-inset-bottom));display:flex;justify-content:space-between;align-items:flex-end;padding:0 clamp(1.2rem, 4vw, 3rem);font-size:.6rem;letter-spacing:.32em;text-transform:uppercase}
 footer a{opacity:.72;transition:opacity .4s}footer a:hover{opacity:1}
 @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
@@ -78,5 +79,6 @@ footer a{opacity:.72;transition:opacity .4s}footer a:hover{opacity:1}
 <a href="mailto:info@layuna.ae">info@layuna.ae</a>
 <a href="legal.html">Legal</a>
 </footer>
+<script>document.addEventListener("gesturestart",function(e){e.preventDefault()},{passive:false});document.addEventListener("touchmove",function(e){if(e.scale&&e.scale!==1)e.preventDefault()},{passive:false});</script>
 </body>
 </html>
