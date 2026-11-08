@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Layuna</title>
 <meta name="description" content="Layuna reimagines sleep in the UAE – individually tailored sleep surfaces.">
-<meta name="color-scheme" content="dark">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#e4d3b8">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Layuna">
 <meta property="og:description" content="Layuna reimagines sleep in the UAE – individually tailored sleep surfaces.">
@@ -15,23 +16,28 @@
 <style>
 :root{--ivory:#fbf8f3;--serif:"Bodoni 72","Bodoni Moda",Didot,"Didot LT STD","Playfair Display","Times New Roman",Georgia,serif}
 *{box-sizing:border-box}html,body{margin:0;height:100%;-webkit-text-size-adjust:100%}
-body{background:#2a2118;color:var(--ivory);font-family:var(--serif);overflow:hidden}
+html{background:linear-gradient(to bottom,#e4d3b8 0%,#e4d3b8 50%,#bf844f 50%,#bf844f 100%)}
+body{background:transparent;color:var(--ivory);font-family:var(--serif);overflow:hidden}
 a{color:inherit;text-decoration:none}a:focus-visible{outline:1px solid var(--ivory);outline-offset:4px}
-.stage{position:fixed;inset:0;background:#cdbca3 url(media/hero-v2-poster.jpg) center/cover no-repeat}
-@media (orientation:portrait){.stage{background-image:url(media/hero-v2-poster-mobile.jpg)}}
-.stage video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.stage{position:fixed;inset:0;background:linear-gradient(to bottom,#e4d3b8 0%,#dcc4a2 45%,#c99a68 70%,#bf844f 100%)}
+.stage video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;-webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 10%,#000 86%,transparent 100%);mask-image:linear-gradient(to bottom,transparent 0%,#000 10%,#000 86%,transparent 100%)}
 .stage::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%, rgba(38,27,16,.30) 0%, rgba(38,27,16,.10) 42%, rgba(38,27,16,0) 70%),linear-gradient(to bottom, rgba(30,22,14,.12) 0%, rgba(30,22,14,0) 30%, rgba(30,22,14,0) 65%, rgba(30,22,14,.38) 100%)}
 .ui{position:fixed;inset:0;display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:1fr auto minmax(min-content, 1fr);padding:max(1.4rem, env(safe-area-inset-top)) clamp(1.2rem, 4vw, 3rem) max(1.2rem, env(safe-area-inset-bottom))}
 .center{grid-row:2;display:flex;flex-direction:column;align-items:center;text-align:center}
 .mark{margin:0;color:rgba(251,248,243,.8);font-weight:400;font-size:clamp(2.4rem, 8vw, 6rem);letter-spacing:.32em;margin-right:-.32em;line-height:1;text-shadow:0 1px 30px rgba(40,28,16,.25);animation:fade 2.4s ease-out both}
-.ar{display:block;height:clamp(3.2rem, 7vw, 5.6rem);width:auto;margin-top:clamp(.8rem, 2vw, 1.4rem);opacity:.74;filter:drop-shadow(0 1px 18px rgba(40,28,16,.25));animation:fade 2.4s ease-out .4s both}
-.prose{grid-row:3;align-self:end;justify-self:center;width:min(46rem, 100%);margin-top:clamp(1.2rem, 3vh, 3rem);margin-bottom:clamp(2.4rem, 6vh, 3.6rem);display:grid;grid-template-columns:1fr 1fr;column-gap:clamp(1.2rem, 3vw, 2.6rem);position:relative;opacity:.46;text-shadow:0 0 12px rgba(50,35,20,.4);animation:soft 3.4s ease-out 1s both}
+.ar{display:block;width:clamp(8rem, 30vw, 22rem);height:auto;margin-top:clamp(.8rem, 2vw, 1.4rem);opacity:.74;filter:drop-shadow(0 1px 18px rgba(40,28,16,.25));animation:fade 2.4s ease-out .4s both}
+.prose{grid-row:3;align-self:end;justify-self:center;position:relative;width:min(38rem, calc(100% - clamp(2rem, 18vw, 16rem)));margin-top:clamp(1.2rem, 3vh, 3rem);margin-bottom:clamp(2.6rem, 6.5vh, 3.8rem);display:grid;grid-template-columns:1fr 1fr;column-gap:clamp(1.4rem, 3.2vw, 2.6rem);opacity:.5;text-shadow:0 1px 10px rgba(40,28,16,.25);animation:soft 3.4s ease-out 1s both}
 .prose::before{content:"";position:absolute;left:50%;top:.2rem;bottom:.2rem;width:1px;background:currentColor;opacity:.4}
-.blk{font-size:clamp(.52rem, .78vw, .6rem);line-height:1.3;text-align:justify;hyphens:auto;-webkit-hyphens:auto;min-width:0}
-.blk p{margin:0 0 .6em}
-.en p:first-child::first-letter{float:left;font-size:5.6em;line-height:.74;margin:.04em .08em 0 0;font-weight:400}
-.ar-t{direction:rtl;font-family:"Geeza Pro","Al Nile","Noto Naskh Arabic",serif;line-height:1.55;hyphens:none;-webkit-hyphens:none;font-size:clamp(.6rem, .88vw, .68rem)}
-@media (max-width:520px){.ui{padding-left:1rem;padding-right:1rem}.prose{column-gap:1.1rem;margin-bottom:3rem}.blk{font-size:7.4px;line-height:1.28}.ar-t{font-size:8px;line-height:1.5}.en p:first-child::first-letter{font-size:4.6em}}
+.blk{min-width:0;font-size:clamp(.46rem, .66vw, .54rem);line-height:1.5;text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+.blk p{margin:0}
+.kick{display:block;font-size:.86em;letter-spacing:.32em;text-transform:uppercase;margin-bottom:.8em}
+.kick i{font-style:normal;margin-right:.7em;opacity:.75}
+.lede{font-style:italic;font-size:1.16em;line-height:1.35;margin-bottom:.4em !important;text-align:left}
+.en .lede::first-letter{float:left;font-style:normal;font-size:2.9em;line-height:.8;margin:.05em .1em 0 0}
+.ar-t{font-family:var(--arab, "Geeza Pro","Al Nile","Noto Naskh Arabic",serif);line-height:1.75}
+.ar-t .kick{letter-spacing:0;font-size:.95em}
+.ar-t .lede{font-style:normal;font-weight:600;text-align:right}
+@media (max-width:640px){.prose{width:calc(100% - 2.6rem);column-gap:1.1rem;margin-bottom:3.2rem}.blk{font-size:6.8px;line-height:1.45}.ar-t{font-size:7.4px;line-height:1.7}.kick{letter-spacing:.24em}}
 footer{position:fixed;left:0;right:0;bottom:max(1rem, env(safe-area-inset-bottom));display:flex;justify-content:space-between;align-items:flex-end;padding:0 clamp(1.2rem, 4vw, 3rem);font-size:.6rem;letter-spacing:.32em;text-transform:uppercase}
 footer a{opacity:.72;transition:opacity .4s}footer a:hover{opacity:1}
 @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
@@ -55,8 +61,17 @@ footer a{opacity:.72;transition:opacity .4s}footer a:hover{opacity:1}
 <img class="ar" src="media/ar-layuna.png" alt="ليونا" lang="ar">
 </div>
 <div class="prose" aria-label="About Layuna">
-<div class="blk en" lang="en"><p>Sleep in the Emirates moves between heat and cool air, between long days and short nights. We begin from one principle: a surface measured, composed and tuned to the single person who rests on it &ndash; posture, weight, climate and habit.</p><p>Layers of foam are chosen zone by zone &ndash; shoulders, waist, hips and legs &ndash; so the spine rests in its natural line and the body is carried rather than pressed. Natural materials breathe, recover and settle into the habits of the sleeper.</p><p>Each surface begins with a conversation and ends with a fitting. Firmness is adjusted and details revisited until it feels inevitable &ndash; quiet, supportive, entirely your own. Conceived in Dubai, made to your measure.</p></div>
-<div class="blk ar-t" lang="ar" dir="rtl"><p>النوم في الإمارات حوارٌ بين الحرارة والهواء البارد، وبين نهارٍ طويل وليلٍ قصير. ننطلق من مبدأ واحد: سطحُ نومٍ يُقاس ويُصاغ ويُضبط على مقاس شخصٍ واحد يستريح عليه &ndash; وضعيّة جسمه ووزنه ومناخه وعاداته.</p><p>تُختار طبقات الإسفنج منطقةً منطقة &ndash; الكتفان والخصر والوركان والساقان &ndash; فيستقر العمود الفقري في خطّه الطبيعي ويُحمل الجسد بدل أن يُضغط. أما المواد الطبيعية فتتنفس وتستعيد شكلها وتتأقلم مع عادات النائم.</p><p>يبدأ كل سطح بحديثٍ وينتهي بتجربةِ ضبط. تُعدَّل درجة الصلابة وتُراجَع التفاصيل حتى يبدو الأمر حتميًّا &ndash; هادئًا وداعمًا وملكًا لك وحدك. صُمّم في دبي، ويُصنع على قياسك.</p></div>
+<div class="blk en" lang="en">
+<span class="kick"><i>III</i>The Fitting</span>
+<p class="lede">Not a product chosen from a shelf.</p>
+<p>Each surface begins with a conversation and ends with a fitting. Layers of foam are selected zone by zone &ndash; shoulders, waist, legs &ndash; so the spine rests in its natural line and the body is carried rather than pressed. Firmness is adjusted, profiles refined, details revisited until it feels inevitable &ndash; quiet, supportive, entirely your own. A place of rest composed for one person, in one home, under the desert sky. Conceived in Dubai, made to your measure.</p>
+</div>
+<div class="blk ar-t" lang="ar" dir="rtl">
+<span class="kick">التهيئة &middot; ٣</span>
+<p class="lede">ليس منتجاً يُختار من رفّ.</p>
+<p>يبدأ كل سطح نوم بحوار وينتهي بتجربة ضبط. تُختار طبقات الإسفنج منطقةً منطقة &ndash; الكتفان والخصر والساقان &ndash; فيستقر العمود الفقري في خطّه الطبيعي ويُحمل الجسد بدل أن يُضغط. تُعدَّل درجة الصلابة وتُراجَع التفاصيل حتى يبدو الأمر حتمياً &ndash; هادئاً وداعماً وملكاً لك وحدك. مكانٌ للراحة صُمّم لشخص واحد، في بيت واحد، تحت سماء الصحراء. صُمّم في دبي، ويُصنع على قياسك.</p>
+</div>
+</div>
 </div>
 </div>
 <footer>
