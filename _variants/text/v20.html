@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Layuna &middot; Text v20</title>
+<meta name="description" content="Layuna reimagines sleep in the UAE – individually tailored sleep surfaces.">
+<meta name="color-scheme" content="dark">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Layuna">
+<meta property="og:description" content="Layuna reimagines sleep in the UAE – individually tailored sleep surfaces.">
+<meta property="og:url" content="https://layuna.ae/">
+<meta property="og:image" content="https://layuna.ae/media/hero-poster.jpg">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<style>
+:root{--ivory:#fbf8f3;--serif:"Bodoni 72","Bodoni Moda",Didot,"Didot LT STD","Playfair Display","Times New Roman",Georgia,serif}
+*{box-sizing:border-box}html,body{margin:0;height:100%;-webkit-text-size-adjust:100%}
+body{background:#2a2118;color:var(--ivory);font-family:var(--serif);overflow:hidden}
+a{color:inherit;text-decoration:none}a:focus-visible{outline:1px solid var(--ivory);outline-offset:4px}
+.stage{position:fixed;inset:0;background:#cdbca3 url(../../media/hero-poster.jpg) center/cover no-repeat}
+@media (orientation:portrait){.stage{background-image:url(../../media/hero-poster-mobile.jpg)}}
+.stage video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.stage::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%, rgba(38,27,16,.30) 0%, rgba(38,27,16,.10) 42%, rgba(38,27,16,0) 70%),linear-gradient(to bottom, rgba(30,22,14,.12) 0%, rgba(30,22,14,0) 30%, rgba(30,22,14,0) 65%, rgba(30,22,14,.38) 100%)}
+.ui{position:fixed;inset:0;display:grid;grid-template-rows:1fr auto minmax(min-content, 1fr);padding:max(1.4rem, env(safe-area-inset-top)) clamp(1.2rem, 4vw, 3rem) max(1.2rem, env(safe-area-inset-bottom))}
+.center{grid-row:2;display:flex;flex-direction:column;align-items:center;text-align:center}
+.mark{margin:0;color:rgba(251,248,243,.8);font-weight:400;font-size:clamp(2.4rem, 8vw, 6rem);letter-spacing:.32em;margin-right:-.32em;line-height:1;text-shadow:0 1px 30px rgba(40,28,16,.25);animation:fade 2.4s ease-out both}
+.ar{display:block;height:clamp(3.2rem, 7vw, 5.6rem);width:auto;margin-top:clamp(.8rem, 2vw, 1.4rem);opacity:.74;filter:drop-shadow(0 1px 18px rgba(40,28,16,.25));animation:fade 2.4s ease-out .4s both}
+footer{position:fixed;left:0;right:0;bottom:max(1rem, env(safe-area-inset-bottom));display:flex;justify-content:space-between;align-items:flex-end;padding:0 clamp(1.2rem, 4vw, 3rem);font-size:.6rem;letter-spacing:.32em;text-transform:uppercase}
+footer a{opacity:.72;transition:opacity .4s}footer a:hover{opacity:1}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media (max-width:640px){footer{font-size:.54rem;letter-spacing:.24em}}
+@media (prefers-reduced-motion:reduce){.stage video{display:none}.mark,.ar{animation:none}}
+
+.v{position:fixed;color:var(--ivory);font-size:.6rem;line-height:1.6;opacity:0;--o:.62;text-shadow:0 0 14px rgba(50,35,20,.45);animation:vin 3.2s ease-out .8s both}
+.v p{margin:0}
+.mob{display:none}
+@keyframes vin{from{opacity:0}to{opacity:var(--o)}}
+@media (max-width:760px){.v{display:none!important}.mob{display:block;position:fixed;left:1.4rem;right:1.4rem;bottom:3.6rem;font-size:.64rem;line-height:1.62;text-align:justify;margin:0;color:var(--ivory);opacity:.44}}
+
+.lt{right:clamp(1.4rem,6vw,5.5rem);bottom:3.5rem;width:min(28rem,44vw);font-style:italic;font-size:.74rem;line-height:1.72;transform:rotate(-.7deg);text-align:left;font-family:"Baskerville","Hoefler Text","Iowan Old Style",Georgia,serif}
+.lt p+p{margin-top:.7em}
+.lt .sal,.lt .sig{font-family:"Snell Roundhand","Apple Chancery","Brush Script MT",cursive;font-style:normal;font-size:1.5em;line-height:1.25}
+.lt .sal{margin-bottom:.15em}.lt .sig{margin-top:.5em;text-align:right}
+
+</style>
+</head>
+<body>
+<div class="stage" aria-hidden="true">
+</div>
+<div class="ui">
+<div class="center">
+<h1 class="mark">LAYUNA</h1>
+<img class="ar" src="../../media/ar-layuna.png" alt="ليونا" lang="ar">
+</div>
+<div class="v lt"><p class="sal">Dear sleeper,</p>
+<p>I wanted to tell you how a night should be made. It begins not with a catalogue but with you &ndash; the way you lie, the way you turn, the weight you bring home from a long day in the heat.</p>
+<p>Layers of foam, chosen zone by zone. Cotton, wool and linen that breathe. Nothing glued where it can be stitched.</p>
+<p>Then we sit, we listen, and we adjust, until it feels inevitable.</p>
+<p class="sig">with care, from Dubai</p></div>
+<p class="mob">Every sleep surface begins with a body, not a catalogue. Sleep in the Emirates is a negotiation between heat and cool air, between long days and short nights, between travel and return. We begin from a single principle: a surface measured, composed and tuned to the one person who rests on it &ndash; posture, weight, climate and habit.</p>
+</div>
+<footer>
+<a href="mailto:info@layuna.ae">info@layuna.ae</a>
+<a href="../../legal.html">Legal</a>
+</footer>
+</body>
+</html>
