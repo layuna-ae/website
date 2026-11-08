@@ -20,18 +20,21 @@ a{color:inherit;text-decoration:none}a:focus-visible{outline:1px solid var(--ivo
 .stage{position:fixed;inset:0;background:#cdbca3 url(media/hero-poster.jpg) center/cover no-repeat}
 .stage video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .stage::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%, rgba(38,27,16,.30) 0%, rgba(38,27,16,.10) 42%, rgba(38,27,16,0) 70%),linear-gradient(to bottom, rgba(30,22,14,.12) 0%, rgba(30,22,14,0) 30%, rgba(30,22,14,0) 65%, rgba(30,22,14,.38) 100%)}
-.ui{position:fixed;inset:0;display:grid;grid-template-rows:1fr auto 1fr;padding:max(1.4rem, env(safe-area-inset-top)) clamp(1.2rem, 4vw, 3rem) max(1.2rem, env(safe-area-inset-bottom))}
+.ui{position:fixed;inset:0;display:grid;grid-template-rows:1fr auto minmax(min-content, 1fr);padding:max(1.4rem, env(safe-area-inset-top)) clamp(1.2rem, 4vw, 3rem) max(1.2rem, env(safe-area-inset-bottom))}
 .center{grid-row:2;display:flex;flex-direction:column;align-items:center;text-align:center}
 .mark{margin:0;color:rgba(251,248,243,.8);font-weight:400;font-size:clamp(2.4rem, 8vw, 6rem);letter-spacing:.32em;margin-right:-.32em;line-height:1;text-shadow:0 1px 30px rgba(40,28,16,.25);animation:fade 2.4s ease-out both}
 .ar{display:block;height:clamp(3.2rem, 7vw, 5.6rem);width:auto;margin-top:clamp(.8rem, 2vw, 1.4rem);opacity:.74;filter:drop-shadow(0 1px 18px rgba(40,28,16,.25));animation:fade 2.4s ease-out .4s both}
-.prose{grid-row:3;align-self:end;justify-self:center;width:min(30rem, 100%);margin-bottom:clamp(1.6rem, 5vh, 3rem);font-size:clamp(.56rem, 1.05vw, .64rem);line-height:1.75;letter-spacing:.015em;text-align:justify;text-align-last:center;hyphens:auto;-webkit-hyphens:auto;opacity:.34;animation:soft 3.4s ease-out 1s both}
-.prose p{margin:0 0 .9em}
-.prose .lead{letter-spacing:.24em;text-transform:uppercase;font-size:.92em;text-align:center}
+.prose{grid-row:3;align-self:end;justify-self:center;width:min(34rem, 100%);margin-top:clamp(1.6rem, 4vh, 3rem);margin-bottom:clamp(2.2rem, 6vh, 3.4rem);font-family:"Avenir Next Condensed","Helvetica Neue Condensed","HelveticaNeue-CondensedBold","Roboto Condensed","Arial Narrow",sans-serif-condensed,sans-serif;font-stretch:condensed;text-transform:uppercase;text-align:justify;text-align-last:justify;line-height:1.02;letter-spacing:-.005em;opacity:.4;animation:soft 3.4s ease-out 1s both}
+.prose p{margin:0}
+.prose .top{font-size:clamp(.5rem, .9vw, .62rem);letter-spacing:.42em;text-align:center;text-align-last:center;font-weight:500;margin-bottom:.45em}
+.prose .bill{font-size:clamp(.42rem, .72vw, .52rem);font-weight:500;text-align-last:center}
+.prose .bill b{font-weight:700;font-size:1.35em;letter-spacing:.02em}
+.prose .end{font-size:clamp(.44rem, .76vw, .54rem);letter-spacing:.38em;text-align:center;text-align-last:center;margin-top:.55em;font-weight:500}
 footer{position:fixed;left:0;right:0;bottom:max(1rem, env(safe-area-inset-bottom));display:flex;justify-content:space-between;align-items:flex-end;padding:0 clamp(1.2rem, 4vw, 3rem);font-size:.6rem;letter-spacing:.32em;text-transform:uppercase}
 footer a{opacity:.72;transition:opacity .4s}footer a:hover{opacity:1}
 @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
-@keyframes soft{from{opacity:0}to{opacity:.34}}
-@media (max-width:640px){.prose{width:100%;font-size:.55rem}footer{font-size:.54rem;letter-spacing:.24em}}
+@keyframes soft{from{opacity:0}to{opacity:.4}}
+@media (max-width:640px){.prose{width:100%}footer{font-size:.54rem;letter-spacing:.24em}}
 @media (prefers-reduced-motion:reduce){.stage video{display:none}.mark,.ar,.prose{animation:none}}
 </style>
 </head>
@@ -49,9 +52,10 @@ footer a{opacity:.72;transition:opacity .4s}footer a:hover{opacity:1}
 <h1 class="mark">LAYUNA</h1>
 <img class="ar" src="media/ar-layuna.png" alt="ليونا" lang="ar">
 </div>
-<div class="prose">
-<p class="lead">Reimagining sleep in the Emirates</p>
-<p>Every sleep surface is measured, composed and tuned to the person who rests on it &ndash; body, posture, climate and habit. Natural materials, quiet craftsmanship and an individual fitting replace the one-size mattress. A perfect night begins long before you lie down: with listening, with precision, with time. Conceived in Dubai, made to your measure.</p>
+<div class="prose" aria-label="About Layuna">
+<p class="top">Layuna &middot; Dubai &middot; Reimagining sleep in the Emirates</p>
+<p class="bill"><b>Every sleep surface</b> measured, composed and tuned to the person who rests on it &middot; body &middot; posture &middot; climate &middot; habit &middot; <b>natural materials</b> quiet craftsmanship and an individual fitting replace the one-size mattress &middot; a perfect night begins long before you lie down with listening with precision with time &middot; life in the Emirates moves between heat and cool air long days and short nights travel and return &middot; <b>layers of foam</b> selected zone by zone for shoulders waist and legs so the spine rests in its natural line and the body is carried rather than pressed &middot; breathable covers and natural fibres for warm nights and conditioned rooms alike &middot; <b>each surface</b> begins with a conversation and ends with a fitting &middot; firmness adjusted &middot; profiles refined &middot; details revisited until it feels inevitable &middot; quiet &middot; supportive &middot; entirely your own &middot; <b>not a product chosen from a shelf</b> but a place of rest composed for one person in one home under the desert sky</p>
+<p class="end">Conceived in Dubai &middot; made to your measure</p>
 </div>
 </div>
 <footer>
