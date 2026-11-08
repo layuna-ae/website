@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Layuna</title>
+<meta name="description" content="Layuna reimagines sleep in the UAE – individually tailored sleep surfaces, Dubai.">
+<meta name="color-scheme" content="light">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Layuna">
+<meta property="og:description" content="Layuna reimagines sleep in the UAE – individually tailored sleep surfaces, Dubai.">
+<meta property="og:url" content="https://layuna.ae/">
+<meta property="og:image" content="https://layuna.ae/media/hero-poster.jpg">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<style>
+:root{--bg:#f6f2ec;--fg:#1d1a16;--mute:#8a8277;--line:#ddd6cb;--serif:"Bodoni 72","Bodoni Moda",Didot,"Didot LT STD","Playfair Display","Times New Roman",Georgia,serif;--arab:"Al Nile","Geeza Pro","Noto Naskh Arabic","Times New Roman",serif}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;background:var(--bg);color:var(--fg);font-family:var(--serif);line-height:1.6}
+a{color:inherit;text-decoration:none}
+a:focus-visible{outline:1px solid var(--fg);outline-offset:4px}
+main{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:clamp(4rem, 10vh, 7rem) 1.5rem 2rem;text-align:center}
+/* LOGO: Wortmarke – später durch logo.svg ersetzbar */
+.mark{margin:0;font-weight:400;font-size:clamp(2.6rem, 9vw, 6.4rem);letter-spacing:.32em;margin-right:-.32em;line-height:1;animation:fade 2.2s ease-out both}
+.ar{margin:.9rem 0 0;font-family:var(--arab);font-size:clamp(1.3rem, 3.6vw, 2.2rem);letter-spacing:.04em;color:var(--fg);opacity:.85;animation:fade 2.2s ease-out .35s both}
+.rule{width:3.5rem;height:1px;background:var(--fg);opacity:.35;margin:clamp(2.2rem, 5vw, 3.4rem) auto;animation:fade 2.2s ease-out .6s both}
+.prose{max-width:34rem;margin:0 auto;font-size:clamp(.72rem, 1.6vw, .86rem);line-height:1.75;text-align:justify;text-align-last:center;hyphens:auto;-webkit-hyphens:auto;color:var(--fg);opacity:.26;animation:fadeSoft 3s ease-out .9s both}
+.prose p{margin:0 0 1em}
+.prose .lead{font-size:1.06em;letter-spacing:.02em}
+.prose[dir=rtl]{font-family:var(--arab);text-align-last:center;margin-top:1.4em}
+footer{padding:2.5rem 1.5rem 2.2rem;text-align:center;color:var(--mute);font-size:.68rem;line-height:1.9;letter-spacing:.06em;max-width:58rem;margin:0 auto}
+footer .mail{display:inline-block;margin-bottom:1.2rem;font-size:.78rem;letter-spacing:.34em;text-transform:uppercase;color:var(--fg);opacity:.7;padding-bottom:.25rem;border-bottom:1px solid var(--line);transition:opacity .4s}
+footer .mail:hover{opacity:1}
+footer p{margin:0}
+footer .legal{margin-top:.6rem;letter-spacing:.2em;text-transform:uppercase;font-size:.6rem}
+
+.hero{position:relative;height:100vh;height:100svh;min-height:32rem;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;background:#d9cbb6 url(media/hero-poster.jpg) center/cover no-repeat;color:#fbf8f3;text-align:center}
+.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.hero::after{content:"";position:absolute;inset:0;z-index:1;background:radial-gradient(ellipse at center, rgba(40,30,20,.28) 0%, rgba(40,30,20,.12) 45%, rgba(40,30,20,0) 75%),linear-gradient(to bottom, rgba(30,22,14,.10), rgba(30,22,14,.18))}
+.hero > *:not(video){position:relative;z-index:2}
+.hero .mark{color:#fbf8f3;text-shadow:0 1px 30px rgba(40,28,16,.25)}
+.hero .ar{color:#fbf8f3;opacity:.92}
+.scroll{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);z-index:2;width:1px;height:3rem;background:linear-gradient(#fbf8f3,transparent);opacity:.6}
+@media (prefers-reduced-motion:reduce){.hero video{display:none}}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@keyframes fadeSoft{from{opacity:0}to{opacity:.26}}
+@media (prefers-reduced-motion:reduce){.mark,.ar,.rule,.prose{animation:none}}
+</style>
+</head>
+<body>
+<header class="hero">
+<video autoplay muted loop playsinline preload="metadata" poster="media/hero-poster.jpg" aria-hidden="true">
+<source src="media/hero-4k.mp4" type="video/mp4; codecs=hvc1" media="(min-width: 2000px)">
+<source src="media/hero-mobile.mp4" type="video/mp4" media="(max-width: 760px)">
+<source src="media/hero.webm" type="video/webm">
+<source src="media/hero.mp4" type="video/mp4">
+</video>
+<h1 class="mark">LAYUNA</h1>
+<p class="ar" lang="ar" dir="rtl">ليونا</p>
+<span class="scroll" aria-hidden="true"></span>
+</header>
+<main>
+<div class="rule" aria-hidden="true"></div>
+<div class="prose">
+<p class="lead">Layuna reimagines sleep for life in the Emirates.</p>
+<p>Every sleep surface is measured, composed and tuned to the person who rests on it &ndash; body, posture, climate and habit. Natural materials, quiet craftsmanship and an individual fitting replace the one-size mattress. A perfect night begins long before you lie down: with listening, with precision, with time. Conceived in Dubai, made to your measure, adjusted until it is right.</p>
+</div>
+<div class="prose" lang="ar" dir="rtl">
+<p>ليونا تعيد ابتكار النوم في الإمارات &ndash; سطح نوم مصمم ومعدّل خصيصاً لكل شخص.</p>
+</div>
+</main>
+<footer>
+<a class="mail" href="mailto:info@layuna.ae">info@layuna.ae</a>
+<p>LAYUNA TRADING L.L.C &middot; Limited Liability Company &ndash; Single Owner &middot; Commercial License No. 1569590 (Dubai Department of Economy and Tourism) &middot; Office 3-A55, Al Quoz Industrial 1, Dubai, United Arab Emirates</p>
+<p class="legal"><a href="legal.html">Legal Notice &amp; Privacy</a></p>
+</footer>
+</body>
+</html>
