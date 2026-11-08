@@ -13,6 +13,7 @@
 body{background:#2a2118;color:var(--ivory);font-family:var(--serif)}
 a{color:inherit;text-decoration:none}a:focus-visible{outline:1px solid var(--ivory);outline-offset:4px}
 .stage{position:fixed;inset:0;background:#cdbca3 url(media/hero-poster.jpg) center/cover no-repeat}
+@media (orientation:portrait){.stage{background-image:url(media/hero-poster-mobile.jpg)}}
 .stage video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .stage::after{content:"";position:absolute;inset:0;background:rgba(32,24,16,.52);backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px)}
 main{position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:4rem clamp(1.2rem, 4vw, 3rem) 5rem;text-align:center}
@@ -31,7 +32,7 @@ footer a{opacity:.72}footer a:hover{opacity:1}
 <body>
 <div class="stage" aria-hidden="true">
 <video autoplay muted loop playsinline preload="metadata" poster="media/hero-poster.jpg">
-<source src="media/hero-mobile.mp4" type="video/mp4" media="(max-width: 760px)">
+<source src="media/hero-mobile.mp4" type="video/mp4" media="(orientation: portrait)">
 <source src="media/hero.webm" type="video/webm">
 <source src="media/hero.mp4" type="video/mp4">
 </video>
