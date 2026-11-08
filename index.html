@@ -21,23 +21,21 @@ a{color:inherit;text-decoration:none}a:focus-visible{outline:1px solid var(--ivo
 @media (orientation:portrait){.stage{background-image:url(media/hero-v2-poster-mobile.jpg)}}
 .stage video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .stage::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%, rgba(38,27,16,.30) 0%, rgba(38,27,16,.10) 42%, rgba(38,27,16,0) 70%),linear-gradient(to bottom, rgba(30,22,14,.12) 0%, rgba(30,22,14,0) 30%, rgba(30,22,14,0) 65%, rgba(30,22,14,.38) 100%)}
-.ui{position:fixed;inset:0;display:grid;grid-template-rows:1fr auto minmax(min-content, 1fr);padding:max(1.4rem, env(safe-area-inset-top)) clamp(1.2rem, 4vw, 3rem) max(1.2rem, env(safe-area-inset-bottom))}
+.ui{position:fixed;inset:0;display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:1fr auto minmax(min-content, 1fr);padding:max(1.4rem, env(safe-area-inset-top)) clamp(1.2rem, 4vw, 3rem) max(1.2rem, env(safe-area-inset-bottom))}
 .center{grid-row:2;display:flex;flex-direction:column;align-items:center;text-align:center}
 .mark{margin:0;color:rgba(251,248,243,.8);font-weight:400;font-size:clamp(2.4rem, 8vw, 6rem);letter-spacing:.32em;margin-right:-.32em;line-height:1;text-shadow:0 1px 30px rgba(40,28,16,.25);animation:fade 2.4s ease-out both}
 .ar{display:block;height:clamp(3.2rem, 7vw, 5.6rem);width:auto;margin-top:clamp(.8rem, 2vw, 1.4rem);opacity:.74;filter:drop-shadow(0 1px 18px rgba(40,28,16,.25));animation:fade 2.4s ease-out .4s both}
-.prose{grid-row:3;align-self:end;justify-self:center;width:min(58rem, 100%);margin-top:clamp(1.6rem, 4vh, 3rem);margin-bottom:clamp(2.4rem, 6vh, 3.6rem);display:grid;grid-template-columns:repeat(3, 1fr);column-gap:clamp(1.4rem, 3vw, 2.6rem);opacity:.44;animation:soft 3.4s ease-out 1s both}
-.col{position:relative;font-size:clamp(.54rem, .82vw, .62rem);line-height:1.62;text-align:justify;hyphens:auto;-webkit-hyphens:auto}
-.col + .col::before{content:"";position:absolute;left:calc(clamp(1.4rem, 3vw, 2.6rem) / -2);top:.2rem;bottom:.2rem;width:1px;background:currentColor;opacity:.4}
-.kick{display:block;font-size:.82em;letter-spacing:.34em;text-transform:uppercase;margin-bottom:.7em;text-align:left}
-.kick i{font-style:normal;margin-right:.6em;opacity:.7}
-.col p{margin:0}
-.col .lede{font-style:italic;font-size:1.18em;line-height:1.38;margin-bottom:.55em;text-align:left;hyphens:manual}
-.col .lede::first-letter{float:left;font-style:normal;font-size:3.1em;line-height:.82;margin:.06em .08em 0 0}
+.prose{grid-row:3;align-self:end;justify-self:center;width:min(46rem, 100%);margin-top:clamp(1.2rem, 3vh, 3rem);margin-bottom:clamp(2.4rem, 6vh, 3.6rem);display:grid;grid-template-columns:1fr 1fr;column-gap:clamp(1.2rem, 3vw, 2.6rem);position:relative;opacity:.46;text-shadow:0 0 12px rgba(50,35,20,.4);animation:soft 3.4s ease-out 1s both}
+.prose::before{content:"";position:absolute;left:50%;top:.2rem;bottom:.2rem;width:1px;background:currentColor;opacity:.4}
+.blk{font-size:clamp(.52rem, .78vw, .6rem);line-height:1.3;text-align:justify;hyphens:auto;-webkit-hyphens:auto;min-width:0}
+.blk p{margin:0 0 .6em}
+.en p:first-child::first-letter{float:left;font-size:5.6em;line-height:.74;margin:.04em .08em 0 0;font-weight:400}
+.ar-t{direction:rtl;font-family:"Geeza Pro","Al Nile","Noto Naskh Arabic",serif;line-height:1.55;hyphens:none;-webkit-hyphens:none;font-size:clamp(.6rem, .88vw, .68rem)}
+@media (max-width:520px){.ui{padding-left:1rem;padding-right:1rem}.prose{column-gap:1.1rem;margin-bottom:3rem}.blk{font-size:7.4px;line-height:1.28}.ar-t{font-size:8px;line-height:1.5}.en p:first-child::first-letter{font-size:4.6em}}
 footer{position:fixed;left:0;right:0;bottom:max(1rem, env(safe-area-inset-bottom));display:flex;justify-content:space-between;align-items:flex-end;padding:0 clamp(1.2rem, 4vw, 3rem);font-size:.6rem;letter-spacing:.32em;text-transform:uppercase}
 footer a{opacity:.72;transition:opacity .4s}footer a:hover{opacity:1}
 @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
-@keyframes soft{from{opacity:0}to{opacity:.44}}
-@media (max-width:760px){.prose{grid-template-columns:1fr;width:100%}.col:not(:first-child){display:none}}
+@keyframes soft{from{opacity:0}to{opacity:.46}}
 @media (max-width:640px){footer{font-size:.54rem;letter-spacing:.24em}}
 @media (prefers-reduced-motion:reduce){.stage video{display:none}.mark,.ar,.prose{animation:none}}
 </style>
@@ -57,21 +55,8 @@ footer a{opacity:.72;transition:opacity .4s}footer a:hover{opacity:1}
 <img class="ar" src="media/ar-layuna.png" alt="ليونا" lang="ar">
 </div>
 <div class="prose" aria-label="About Layuna">
-<article class="col">
-<span class="kick"><i>I</i>The Measure</span>
-<p class="lede">Every sleep surface begins with a body, not a catalogue.</p>
-<p>It is measured, composed and tuned to the person who rests on it &ndash; posture, weight, climate and habit. Natural materials, quiet craftsmanship and an individual fitting replace the one-size mattress. A perfect night begins long before you lie down: with listening, with precision, with time.</p>
-</article>
-<article class="col">
-<span class="kick"><i>II</i>The Climate</span>
-<p class="lede">Life in the Emirates moves between heat and cool air.</p>
-<p>Long days and short nights, travel and return. Layers of foam are selected zone by zone &ndash; shoulders, waist, legs &ndash; so the spine rests in its natural line and the body is carried rather than pressed. Breathable covers and natural fibres keep the surface calm through warm nights and conditioned rooms alike.</p>
-</article>
-<article class="col">
-<span class="kick"><i>III</i>The Fitting</span>
-<p class="lede">Not a product chosen from a shelf.</p>
-<p>Each surface begins with a conversation and ends with a fitting. Firmness is adjusted, profiles refined, details revisited until it feels inevitable &ndash; quiet, supportive, entirely your own. A place of rest composed for one person, in one home, under the desert sky. Conceived in Dubai, made to your measure.</p>
-</article>
+<div class="blk en" lang="en"><p>Sleep in the Emirates moves between heat and cool air, between long days and short nights. We begin from one principle: a surface measured, composed and tuned to the single person who rests on it &ndash; posture, weight, climate and habit.</p><p>Layers of foam are chosen zone by zone &ndash; shoulders, waist, hips and legs &ndash; so the spine rests in its natural line and the body is carried rather than pressed. Natural materials breathe, recover and settle into the habits of the sleeper.</p><p>Each surface begins with a conversation and ends with a fitting. Firmness is adjusted and details revisited until it feels inevitable &ndash; quiet, supportive, entirely your own. Conceived in Dubai, made to your measure.</p></div>
+<div class="blk ar-t" lang="ar" dir="rtl"><p>النوم في الإمارات حوارٌ بين الحرارة والهواء البارد، وبين نهارٍ طويل وليلٍ قصير. ننطلق من مبدأ واحد: سطحُ نومٍ يُقاس ويُصاغ ويُضبط على مقاس شخصٍ واحد يستريح عليه &ndash; وضعيّة جسمه ووزنه ومناخه وعاداته.</p><p>تُختار طبقات الإسفنج منطقةً منطقة &ndash; الكتفان والخصر والوركان والساقان &ndash; فيستقر العمود الفقري في خطّه الطبيعي ويُحمل الجسد بدل أن يُضغط. أما المواد الطبيعية فتتنفس وتستعيد شكلها وتتأقلم مع عادات النائم.</p><p>يبدأ كل سطح بحديثٍ وينتهي بتجربةِ ضبط. تُعدَّل درجة الصلابة وتُراجَع التفاصيل حتى يبدو الأمر حتميًّا &ndash; هادئًا وداعمًا وملكًا لك وحدك. صُمّم في دبي، ويُصنع على قياسك.</p></div>
 </div>
 </div>
 <footer>
