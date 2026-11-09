@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#e6dccd">
+<title>Layuna – Verwaltung</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+<noscript><p style="padding:2rem;font-family:serif">Für die Verwaltung wird JavaScript benötigt.</p></noscript>
+
+<main id="login" class="login" hidden>
+  <form class="card" id="loginForm" autocomplete="off">
+    <h1 class="mark">LAYUNA</h1>
+    <img class="ar" src="../media/ar-layuna.png" alt="ليونا">
+    <p class="lead">Verwaltung der Website</p>
+    <label for="tok">GitHub-Token</label>
+    <input id="tok" type="password" autocomplete="off" spellcheck="false" placeholder="github_pat_…" required>
+    <label class="check"><input id="remember" type="checkbox"> Angemeldet bleiben (auf diesem Gerät)</label>
+    <button class="btn primary" id="loginBtn" type="submit">Prüfen &amp; anmelden</button>
+    <p class="err" id="loginErr" role="alert" hidden></p>
+    <p class="small">Das Token bleibt nur in diesem Browser und wird ausschließlich an GitHub gesendet.
+      <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">Token erstellen</a></p>
+  </form>
+</main>
+
+<div id="app" hidden>
+  <header class="top">
+    <div class="brand"><span class="mark sm">LAYUNA</span><span class="sub">Verwaltung</span></div>
+    <div class="who"><span id="whoText" class="small"></span><a class="btn ghost" href="../" target="_blank" rel="noopener">Seite ansehen</a><button class="btn ghost" id="logout" type="button">Abmelden</button></div>
+  </header>
+  <div id="mockBanner" class="banner" hidden>Testmodus (?mock=1): Daten werden nur gelesen, nichts wird gespeichert.</div>
+  <nav class="tabs" id="tabs" role="tablist">
+    <button role="tab" data-tab="videos">Videos</button>
+    <button role="tab" data-tab="texts">Texte</button>
+    <button role="tab" data-tab="layout">Layout</button>
+    <button role="tab" data-tab="trash">Papierkorb <span class="count" id="trashCount"></span></button>
+  </nav>
+  <section id="view" class="view"></section>
+  <div class="savebar" id="savebar">
+    <div class="state" id="saveState">Alles gespeichert.</div>
+    <div class="acts"><button class="btn ghost" id="discard" type="button" hidden>Verwerfen</button><button class="btn primary" id="save" type="button" disabled>Speichern</button></div>
+  </div>
+</div>
+
+<dialog id="dlg"><div class="dlg-body" id="dlgBody"></div></dialog>
+<div id="toasts" class="toasts" aria-live="polite"></div>
+<script src="admin.js"></script>
+</body>
+</html>

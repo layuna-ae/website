@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "settings": {
+    "videoMode": "sequence",
+    "textMode": "first",
+    "layout": "editorial"
+  },
+  "videos": [
+    {
+      "id": "v3-monumental",
+      "name": "V3 · Monumentales Leinen",
+      "created": "2026-11-08T20:54:00",
+      "enabled": true,
+      "trashedAt": null,
+      "files": {
+        "1080.mp4": 15625074,
+        "1080.webm": 3691739,
+        "4k.mp4": 37760886,
+        "mobile.mp4": 4997417,
+        "poster.jpg": 250651,
+        "poster-mobile.jpg": 185371
+      }
+    },
+    {
+      "id": "v1-leinen",
+      "name": "V1 · Leinen",
+      "created": "2026-11-08T20:09:00",
+      "enabled": true,
+      "trashedAt": null,
+      "files": {
+        "1080.mp4": 10375908,
+        "1080.webm": 4496380,
+        "4k.mp4": 17166036,
+        "mobile.mp4": 6521410,
+        "poster.jpg": 195453,
+        "poster-mobile.jpg": 141901
+      }
+    },
+    {
+      "id": "v2-duenen-masten",
+      "name": "V2 · Dünen mit Masten",
+      "created": "2026-11-08T20:26:00",
+      "enabled": false,
+      "trashedAt": null,
+      "files": {
+        "1080.mp4": 19309712,
+        "1080.webm": 11370946,
+        "4k.mp4": 41141469,
+        "mobile.mp4": 12575628,
+        "poster.jpg": 220092,
+        "poster-mobile.jpg": 126978
+      }
+    }
+  ],
+  "texts": [
+    {
+      "id": "fitting",
+      "name": "Die Anpassung (The Fitting)",
+      "enabled": true,
+      "trashedAt": null,
+      "layout": "",
+      "en": {
+        "num": "III",
+        "kicker": "The Fitting",
+        "lede": "Not a product chosen from a shelf.",
+        "body": "Each surface begins with a conversation and ends with a fitting. Layers of foam are selected zone by zone – shoulders, waist, legs – so the spine rests in its natural line and the body is carried rather than pressed. Firmness is adjusted, profiles refined, details revisited until it feels inevitable – quiet, supportive, entirely your own. A place of rest composed for one person, in one home, under the desert sky. Conceived in Dubai, made to your measure.",
+        "sub": ""
+      },
+      "ar": {
+        "num": "",
+        "kicker": "التهيئة · ٣",
+        "lede": "ليس منتجاً يُختار من رفّ.",
+        "body": "يبدأ كل سطح نوم بحوار وينتهي بتجربة ضبط. تُختار طبقات الإسفنج منطقةً منطقة – الكتفان والخصر والساقان – فيستقر العمود الفقري في خطّه الطبيعي ويُحمل الجسد بدل أن يُضغط. تُعدَّل درجة الصلابة وتُراجَع التفاصيل حتى يبدو الأمر حتمياً – هادئاً وداعماً وملكاً لك وحدك. مكانٌ للراحة صُمّم لشخص واحد، في بيت واحد، تحت سماء الصحراء. صُمّم في دبي، ويُصنع على قياسك.",
+        "sub": ""
+      }
+    }
+  ]
+}

@@ -11,8 +11,9 @@
 <meta property="og:title" content="Layuna">
 <meta property="og:description" content="Layuna reimagines sleep in the UAE – individually tailored sleep surfaces.">
 <meta property="og:url" content="https://layuna.ae/">
-<meta property="og:image" content="https://layuna.ae/media/hero-v3-poster.jpg">
+<meta property="og:image" content="https://layuna.ae/media/videos/v3-monumental/poster.jpg">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
+<script>document.documentElement.className+=" js";setTimeout(function(){if(!window.__applied&&window.__restore)window.__restore();document.documentElement.classList.add("ready")},3500)</script>
 <style>
 :root{--ivory:#fbf8f3;--serif:"Bodoni 72","Bodoni Moda",Didot,"Didot LT STD","Playfair Display","Times New Roman",Georgia,serif}
 *{box-sizing:border-box}html,body{margin:0;height:100%;touch-action:pan-x pan-y;overscroll-behavior:none;-webkit-text-size-adjust:100%}
@@ -44,17 +45,53 @@ footer a{opacity:.72;transition:opacity .4s}footer a:hover{opacity:1}
 @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 @keyframes soft{from{opacity:0}to{opacity:.46}}
 @media (max-width:640px){footer{font-size:.54rem;letter-spacing:.24em}}
+/* --- Content backend: Video-Fade, Unterzeile, Layout-Presets (data-layout auf .prose) --- */
+.js .stage video{opacity:0;transition:opacity 1.1s ease}
+.js.ready .stage video{opacity:1}
+.sub{margin:clamp(.9rem,2vw,1.5rem) 0 0;font-size:clamp(.5rem,.7vw,.62rem);letter-spacing:.36em;margin-right:-.36em;text-transform:uppercase;opacity:.72;text-shadow:0 1px 14px rgba(40,28,16,.3);animation:fade 2.4s ease-out .8s both}
+.sub [lang=ar]{letter-spacing:0;font-family:var(--arab,"Geeza Pro","Al Nile","Noto Naskh Arabic",serif);font-size:1.15em}
+.sub .dot{margin:0 1.1em;opacity:.6}
+.ui:has(.prose[data-layout=none]) .sub{display:none}
+/* Vogue 3 Spalten */
+.prose[data-layout=vogue]{display:block;opacity:.8;animation-name:soft3;width:min(44rem,calc(100% - clamp(3rem,18vw,14rem)))}
+.prose[data-layout=vogue]::before,.prose[data-layout=quote]::before{display:none}
+.vg{font-size:clamp(.42rem,.58vw,.5rem);line-height:1.55;text-align:center}
+.vg .kick{margin-bottom:1.1em}
+.vg .lede{text-align:center;font-size:2.3em;line-height:1.2;margin:0 auto 1em !important;max-width:17em}
+.vg .lede::first-letter{font-size:1.55em;font-style:normal;line-height:.9}
+.vg-cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:clamp(1.4rem,3.2vw,2.6rem);text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+.vg-cols section{border-top:1px solid rgba(251,248,243,.45);padding-top:.7em}
+.vg-cols .kick{margin-bottom:.6em;text-align:left}
+.vg-cols p{margin:0}
+.vg-ar{text-align:center;margin-top:1.5em;font-family:var(--arab,"Geeza Pro","Al Nile","Noto Naskh Arabic",serif);font-size:1.05em;line-height:1.5}
+.vg-ar .kick{display:inline;letter-spacing:0;margin:0 0 0 .8em}
+.vg-ar .lede{display:inline;font-size:1em;font-weight:600;font-style:normal}
+/* Grosses Zitat + Mikrotext */
+.prose[data-layout=quote]{display:block;width:min(40rem,calc(100% - 3rem));text-align:center;opacity:.9;animation-name:soft2}
+.qt-k{display:block;font-size:clamp(.42rem,.58vw,.5rem);letter-spacing:.32em;text-transform:uppercase;margin-bottom:1.2em}
+.qt-q{margin:0;font-style:italic;font-size:clamp(1.15rem,2.7vw,2.2rem);line-height:1.22}
+.qt-qa{margin:.5em 0 0;font-family:var(--arab,"Geeza Pro","Al Nile","Noto Naskh Arabic",serif);font-size:clamp(1rem,2.1vw,1.7rem);line-height:1.4;font-weight:600}
+.qt-k i{font-style:normal;margin-right:.7em;opacity:.75}
+.qt-m{display:grid;grid-template-columns:1fr 1fr;column-gap:clamp(1.6rem,4vw,3rem);margin-top:clamp(1.2rem,3vh,2rem);padding-top:.9em;border-top:1px solid rgba(251,248,243,.4);font-size:clamp(.34rem,.42vw,.38rem);line-height:1.5;text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+.qt-m p{margin:0}
+.qt-m .ar-t{font-size:1.1em;text-align:right}
+/* Nur Logo */
+.prose[data-layout=none]{display:none}
+@keyframes soft3{from{opacity:0}to{opacity:.8}}
+@keyframes soft2{from{opacity:0}to{opacity:.9}}
+@media (max-width:640px){.prose[data-layout=vogue]{width:calc(100% - 3rem)}.vg{font-size:6.2px}.vg-cols{column-gap:1.2rem}.prose[data-layout=quote]{width:calc(100% - 3rem)}.qt-k{font-size:6.2px}.qt-m{font-size:5.2px;column-gap:1.4rem}.sub{font-size:.46rem;letter-spacing:.26em}}
 @media (prefers-reduced-motion:reduce){.stage video{display:none}.mark,.ar,.prose{animation:none}}
 </style>
 </head>
 <body>
 <div class="stage" aria-hidden="true">
-<video autoplay muted loop playsinline preload="metadata" poster="media/hero-v3-poster.jpg">
-<source src="media/hero-v3-4k.mp4" type="video/mp4; codecs=hvc1" media="(min-width: 2000px)">
-<source src="media/hero-v3-mobile.mp4" type="video/mp4" media="(orientation: portrait)">
-<source src="media/hero-v3.webm" type="video/webm">
-<source src="media/hero-v3.mp4" type="video/mp4">
+<video autoplay muted loop playsinline preload="metadata" poster="media/videos/v3-monumental/poster.jpg">
+<source src="media/videos/v3-monumental/4k.mp4" type="video/mp4; codecs=hvc1" media="(min-width: 2000px)">
+<source src="media/videos/v3-monumental/mobile.mp4" type="video/mp4" media="(orientation: portrait)">
+<source src="media/videos/v3-monumental/1080.webm" type="video/webm">
+<source src="media/videos/v3-monumental/1080.mp4" type="video/mp4">
 </video>
+<script>(function(){var v=document.querySelector(".stage video");window.__fb=v.innerHTML;window.__fbp=v.getAttribute("poster");v.removeAttribute("autoplay");v.innerHTML="";window.__restore=function(){if(window.__restored)return;window.__restored=1;v.removeAttribute("src");v.innerHTML=window.__fb;v.setAttribute("poster",window.__fbp);v.load();var p=v.play();if(p&&p.catch)p.catch(function(){});document.documentElement.classList.add("ready")}})()</script>
 </div>
 <div class="ui">
 <div class="center">
@@ -80,5 +117,66 @@ footer a{opacity:.72;transition:opacity .4s}footer a:hover{opacity:1}
 <a href="legal.html">Legal</a>
 </footer>
 <script>document.addEventListener("gesturestart",function(e){e.preventDefault()},{passive:false});document.addEventListener("touchmove",function(e){if(e.scale&&e.scale!==1)e.preventDefault()},{passive:false});</script>
+<script>
+(function(){
+var D=document,H=D.documentElement,V=D.querySelector(".stage video"),P=D.querySelector(".prose"),C=D.querySelector(".center"),
+Q=new URLSearchParams(location.search),PV=Q.get("preview")!==null,BASE="media/videos/";
+function ls(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v)}catch(e){return null}}
+function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function paras(s){return String(s||"").split(/\n\s*\n/).map(function(x){return x.replace(/\s*\n\s*/g," ").trim()}).filter(Boolean)}
+function pp(s){return paras(s).map(function(x){return"<p>"+esc(x)+"</p>"}).join("")}
+function three(s){var ps=paras(s),out=["","",""];if(ps.length>=3){out=[ps[0],ps[1],ps.slice(2).join(" ")];return out}
+var t=ps.join(" "),ss=t.match(/[^.!?]+[.!?]+["”)]*\s*|[^.!?]+$/g)||[t],tot=t.length||1,acc=0;
+ss.forEach(function(x){var i=Math.min(2,Math.floor((acc+x.length/2)/tot*3));out[i]+=x;acc+=x.length});
+return out.map(function(x){return x.trim()})}
+function render(t,layout){
+layout=layout||"editorial";P.setAttribute("data-layout",layout);
+var e=t.en||{},a=t.ar||{},s=C.querySelector(".sub");
+if(e.sub||a.sub){if(!s){s=D.createElement("p");s.className="sub";C.appendChild(s)}
+s.innerHTML=(e.sub?"<span lang=\"en\">"+esc(e.sub)+"</span>":"")+(e.sub&&a.sub?"<span class=\"dot\">&middot;</span>":"")+(a.sub?"<span lang=\"ar\" dir=\"rtl\">"+esc(a.sub)+"</span>":"")}else if(s)s.remove();
+var ek=(e.num?"<i>"+esc(e.num)+"</i>":"")+esc(e.kicker),h="";
+if(layout=="none"){P.innerHTML="";return}
+if(layout=="vogue"){var c=three(e.body);
+h="<div class=\"vg\" lang=\"en\">"+(e.kicker?"<span class=\"kick\">"+esc(e.kicker)+"</span>":"")+(e.lede?"<p class=\"lede\">"+esc(e.lede)+"</p>":"")+"<div class=\"vg-cols\">"+["I","II","III"].map(function(n,i){return c[i]?"<section><span class=\"kick\"><i>"+n+"</i></span><p>"+esc(c[i])+"</p></section>":""}).join("")+"</div></div>"+
+(a.kicker||a.lede?"<div class=\"vg-ar\" lang=\"ar\" dir=\"rtl\">"+(a.lede?"<span class=\"lede\">"+esc(a.lede)+"</span>":"")+(a.kicker?"<span class=\"kick\">"+esc(a.kicker)+"</span>":"")+"</div>":"")}
+else if(layout=="quote"){
+h=(e.kicker?"<span class=\"qt-k\">"+ek+"</span>":"")+(e.lede?"<p class=\"qt-q\" lang=\"en\">"+esc(e.lede)+"</p>":"")+(a.lede?"<p class=\"qt-qa\" lang=\"ar\" dir=\"rtl\">"+esc(a.lede)+"</p>":"")+
+(e.body||a.body?"<div class=\"qt-m\"><div lang=\"en\">"+pp(e.body)+"</div><div class=\"ar-t\" lang=\"ar\" dir=\"rtl\">"+pp(a.body)+"</div></div>":"")}
+else{
+h="<div class=\"blk en\" lang=\"en\">"+(e.kicker||e.num?"<span class=\"kick\">"+ek+"</span>":"")+(e.lede?"<p class=\"lede\">"+esc(e.lede)+"</p>":"")+pp(e.body)+"</div>"+
+"<div class=\"blk ar-t\" lang=\"ar\" dir=\"rtl\">"+(a.kicker?"<span class=\"kick\">"+esc(a.kicker)+"</span>":"")+(a.lede?"<p class=\"lede\">"+esc(a.lede)+"</p>":"")+pp(a.body)+"</div>"}
+P.innerHTML=h}
+function ready(){H.classList.add("ready")}
+function poster(v){var f=v.files||{},pt=matchMedia("(orientation: portrait)").matches;var n=(pt&&f["poster-mobile.jpg"])?"poster-mobile.jpg":(f["poster.jpg"]?"poster.jpg":null);if(n)V.setAttribute("poster",BASE+v.id+"/"+n)}
+function setVideo(v){var f=v.files||{},b=BASE+v.id+"/",pt=matchMedia("(orientation: portrait)").matches,wide=matchMedia("(min-width: 2000px)").matches,src=null;
+if(wide&&f["4k.mp4"]&&V.canPlayType('video/mp4; codecs="hvc1"'))src="4k.mp4";
+else if(pt&&f["mobile.mp4"])src="mobile.mp4";
+else if(f["1080.webm"]&&V.canPlayType('video/webm; codecs="vp9"'))src="1080.webm";
+else if(f["1080.mp4"])src="1080.mp4";
+if(!src){window.__restore&&window.__restore();return}
+poster(v);window.__applied=1;
+V.addEventListener("loadeddata",ready,{once:true});V.addEventListener("error",function(){window.__restore&&window.__restore()},{once:true});
+setTimeout(ready,2200);V.src=b+src;V.load();var p=V.play();if(p&&p.catch)p.catch(function(){})}
+function act(a){return(a||[]).filter(function(x){return x&&x.enabled&&!x.trashedAt})}
+function byId(a,id){return(a||[]).filter(function(x){return x.id==id})[0]}
+function pick(l,mode,key){if(!l.length)return null;var i=0;
+if(mode=="random")i=Math.floor(Math.random()*l.length);
+else if(mode=="sequence"){var n=parseInt(ls(key))||0;i=n%l.length;ls(key,String(n+1))}
+return l[i]}
+if(PV){ready();
+window.addEventListener("message",function(m){if(m.origin!==location.origin||!m.data||m.data.type!=="layuna-preview")return;var d=m.data;
+if(d.text)render(d.text,d.layout||"editorial");if(d.video)poster(d.video)});
+try{parent.postMessage({type:"layuna-preview-ready"},location.origin)}catch(e){}
+return}
+fetch("content/site.json",{cache:"no-cache"}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(s){
+var st=s.settings||{},vl=act(s.videos),tl=act(s.texts),
+v=(Q.get("video")&&byId(s.videos,Q.get("video")))||pick(vl,st.videoMode,"layuna.visit"),
+t=(Q.get("text")&&byId(s.texts,Q.get("text")))||pick(tl,st.textMode,"layuna.visit.t");
+var lay=Q.get("layout")||(t&&t.layout)||st.layout||"editorial";
+if(t)render(t,lay);else if(Q.get("layout"))P.setAttribute("data-layout",lay);
+if(v)setVideo(v);else window.__restore&&window.__restore()
+}).catch(function(){window.__restore&&window.__restore()});
+})();
+</script>
 </body>
 </html>

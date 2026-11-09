@@ -1,0 +1,28 @@
+name: Papierkorb leeren
+on:
+  schedule:
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+jobs:
+  purge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Purge
+        run: python3 tools/purge_trash.py
+      - name: Commit
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git config user.name "Layuna"
+            git config user.email "info@layuna.ae"
+            git add -A content media
+            git commit -m "Papierkorb: Einträge älter als 7 Tage endgültig gelöscht"
+            git pull --rebase
+            git push
+            gh api -X POST "repos/${{ github.repository }}/pages/builds" || true
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
